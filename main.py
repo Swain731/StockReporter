@@ -77,7 +77,7 @@ def analyze_market(df):
 
 def generate_ai_report(report_data):
     # Set your Gemini API key here or via env variable
-    api_key = os.environ.get("GEMINI_API_KEY", "AIzaSyAUO6tmExk2fusBfdc0DZrtfIvbifCS6FQ")
+    api_key = os.environ.get("GEMINI_API_KEY", "")
     
     if not api_key:
         print("\n==== 🏆 本日台股強勢族群報告 (資料版) ====")
