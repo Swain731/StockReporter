@@ -1,0 +1,7 @@
+requests
+pandas
+numpy
+google-generativeai
+fastapi
+uvicorn
+yfinance
