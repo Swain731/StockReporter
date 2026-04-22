@@ -31,7 +31,7 @@ document.getElementById('btn-market-analyze').addEventListener('click', async ()
       resultBox.innerHTML = `<p style="color:var(--accent-color)">發生錯誤：${data.error}</p>`;
     }
   } catch (error) {
-    resultBox.innerHTML = `<p style="color:var(--accent-color)">連線失敗：請確定後端伺服器 (http://localhost:8000) 已啟動。</p>`;
+    resultBox.innerHTML = `<p style="color:var(--accent-color)">連線或解析失敗：${error.message}。如果是在雲端，請確定後端沒出錯。</p>`;
   } finally {
     loader.classList.add('hidden');
     resultBox.classList.remove('hidden');
@@ -67,7 +67,7 @@ document.getElementById('btn-search').addEventListener('click', async () => {
       resultBox.innerHTML = `<p style="color:var(--accent-color)">發生錯誤：${data.error}</p>`;
     }
   } catch (error) {
-    resultBox.innerHTML = `<p style="color:var(--accent-color)">連線失敗：請確定後端伺服器 (http://localhost:8000) 已啟動。</p>`;
+    resultBox.innerHTML = `<p style="color:var(--accent-color)">連線或解析失敗：${error.message}。如果是在雲端，請確定後端沒出錯。</p>`;
   } finally {
     loader.classList.add('hidden');
     resultBox.classList.remove('hidden');
@@ -102,7 +102,7 @@ document.getElementById('btn-recommend').addEventListener('click', async () => {
       resultBox.innerHTML = `<p style="color:var(--accent-color)">發生錯誤：${data.error}</p>`;
     }
   } catch (error) {
-    resultBox.innerHTML = `<p style="color:var(--accent-color)">連線失敗：請確定後端伺服器 (http://localhost:8000) 已啟動。</p>`;
+    resultBox.innerHTML = `<p style="color:var(--accent-color)">連線或解析失敗：${error.message}。如果是在雲端，請確定後端沒出錯。</p>`;
   } finally {
     loader.classList.add('hidden');
     resultBox.classList.remove('hidden');
