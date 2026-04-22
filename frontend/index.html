@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI 股票分析平台</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- Include Marked.js for markdown rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  </head>
+  <body>
+    <div class="glass-container">
+      <header>
+        <h1>🏆 AI 股票分析平台</h1>
+        <p class="subtitle">技術面 ‧ 基本面 ‧ 籌碼面 全方位解析</p>
+      </header>
+
+      <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab('market')">大盤強勢族群</button>
+        <button class="tab-btn" onclick="switchTab('stock')">個股深入分析</button>
+        <button class="tab-btn" onclick="switchTab('recommend')">明日推薦個股</button>
+      </div>
+
+      <main>
+        <!-- Market Section -->
+        <section id="market-section" class="tab-content active">
+          <div class="action-bar">
+            <button id="btn-market-analyze" class="btn-primary">產生今日大盤分析</button>
+          </div>
+          <div id="market-loader" class="loader hidden">
+            <div class="spinner"></div>
+            <p>正在抓取全市場資料與 AI 分析中，請稍候...</p>
+          </div>
+          <div id="market-result" class="result-box hidden">
+             <!-- Markdown Content goes here -->
+          </div>
+        </section>
+
+        <!-- Individual Stock Section -->
+        <section id="stock-section" class="tab-content">
+          <div class="search-bar">
+            <input type="text" id="stock-input" placeholder="輸入股號 (例如: 2330)" />
+            <button id="btn-search" class="btn-primary">進行分析</button>
+          </div>
+          <div id="stock-loader" class="loader hidden">
+             <div class="spinner"></div>
+             <p>正在抓取個股基本面、技術面與產生 AI 報告...</p>
+          </div>
+          <div id="stock-result" class="result-box hidden">
+             <!-- Markdown Content goes here -->
+          </div>
+        </section>
+
+        <!-- Recommendations Section -->
+        <section id="recommend-section" class="tab-content">
+          <div class="action-bar">
+            <button id="btn-recommend" class="btn-primary">取得明日推薦個股表</button>
+          </div>
+          <div id="recommend-loader" class="loader hidden">
+             <div class="spinner"></div>
+             <p>AI 正在過濾全市場強勢股並精選 10-20 檔，請稍候...</p>
+          </div>
+          <div id="recommend-result" class="result-box hidden" style="overflow-x: auto;">
+             <!-- Markdown Content goes here -->
+          </div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
